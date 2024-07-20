@@ -86,9 +86,9 @@
 // Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
 // та залежно від виду напою оголоси суму досплати.Використовувати switch.
 
-const drink = prompt("Який напій бажаєте?").toLowerCase();
+// const drink = prompt("Який напій бажаєте?").toLowerCase();
 
-function orderDrink(drinkName) {
+// function orderDrink(drinkName) {
   //   switch (drinkName) {
   //     case "кава":
   //       return "Сума до сплати 60 грн.";
@@ -126,3 +126,30 @@ function orderDrink(drinkName) {
 // }
 
 // console.log(orderDrink(drink));
+
+
+//TODO: 6 ===================================
+//  Виведіть методом console.log() зірочки від 1 до 7 штук у вигляді трикутника таким чино
+// *
+// **
+// ***
+// ****
+// *****
+
+// let i = 1;
+// while (i <= 100) {
+//   console.log(i); 
+//   i++;
+// }
+
+// for (let i = 0; i <= 10000; i++) {
+//   console.log(i); 
+// }
+
+// let star= "*"
+
+// for (let i = 0; i < 7; i++) {
+//   console.log(star);
+//   star += "*"
+
+// }
