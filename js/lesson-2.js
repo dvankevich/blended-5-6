@@ -32,3 +32,21 @@
 // for (const style of styles) {
 //   console.log(style);
 // }
+
+//TODO:=============task-02=================
+// напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+
+// const numbers = [20, 10, 30, 50, 60, 70, 80];
+// function sumEn(array = []) {
+//   if (!Array.isArray(array)) {
+//     return 'arguments is not array';
+//   }
+//   const result = [];
+//   for (let index = 0; index < array.length - 1; index++) {
+//     const element = array[index];
+//     result.push(element + array[index + 1]);
+//   }
+//   return result;
+// }
+
+// console.log(sumEn(numbers));
