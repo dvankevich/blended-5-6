@@ -50,3 +50,83 @@
 // }
 
 // console.log(sumEn(numbers));
+
+
+//!  Літерал об'єкта
+//!  Властвості та методи об'єкта
+//TODO:============task-01=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+
+
+// const humen = {
+//   username: "Mango",
+//   hobbi: "footbol",
+//   age: 45,
+
+//   greed() {
+//     return `Hello ${this.username}`
+//   }
+// }
+// const newHumen = Object.create(humen)
+// newHumen.username = "qiwi"
+// console.log(newHumen.greed());
+
+
+// console.log(humen.greed());
+
+
+// console.log(humen.hobbi);
+
+// console.log(humen["hobbi"]);
+
+
+// humen.mood = 'happy'
+// // humen["mood"] = 'happy'
+
+// humen.hobbi = 'skydiving';
+
+// humen.departament = "IT"
+
+// console.log(humen);
+
+// for (const key in newHumen) {
+//   if (newHumen.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+  
+// }
+
+// console.log(Object.keys(newHumen));
+
+// console.log(Object.values(humen));
+
+// console.log(Object.entries(humen));
+
+// const saleris = {
+//   oleg: 3000,
+//   igor: 2000,
+//   vasya: 5000,
+//   petro: 1500,
+
+// }
+// let total = 0;
+// for (const key in saleris) {
+//   if (saleris.hasOwnProperty(key)) {
+//     total += saleris[key]
+//   }
+  
+// }
+
+// console.log(total);
+
+// const values = Object.values(saleris)
+
+// for (const value of values) {
+//   total += value;
+// }
+
+// console.log(total);
