@@ -2,6 +2,21 @@
 //TODO:============task-01=========================
 // Напишіть функцію, яка приймає два числа і колбек-функцію. Функція повинна помножити числа між собою та передати результат дії до колбек-функції. Колбек-функція повинна, у разі, якщо, це число є парним - помножити це число на себе, якщо ні - взяти квадратний корінь з цього числа, та вивести результат у консоль лог.
 
+// function performOperation(a, b, callback) {
+//   return callback(a * b);
+// }
+
+// function callbackFunction(num) {
+//   if (num % 2 === 0) {
+//     return Math.pow(num, 2);
+//   } else {
+//     return Math.sqrt(num);
+//   }
+// }
+// function callbackFunction(num) {
+//   return num % 2 === 0 ? Math.pow(num, 2) : Math.sqrt(num);
+// }
+
 // const result = performOperation(20, 40, callbackFunction);
 // console.log(result);
 
@@ -12,12 +27,54 @@
 // повертатись перше парне число. При використанні другого - має повертатись перше слово у масиві, що починається з літери
 // "O" у будь - якому реєстрі.
 
+// function findElement(array, callback) {
+//   for (const element of array) {
+//     if (callback(element)) {
+//       return element;
+//     }
+//   }
+//   return null;
+// }
+// function isEven(num) {
+//   if (num % 2 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// function startWithO(str) {
+//   if (str[0].toLowerCase() === 'o') {
+//     return true;
+//   }
+//   return false;
+// }
+
 // const numbers = [1, 3, 5, 7, 9, 20];
+// const words = ['apple', 'banana', 'orange', 'pear'];
+
+// function findElement(array, callback) {
+//   let result = null;
+//   array.forEach(element => {
+//     if (callback(element) && result === null) {
+//       result = element;
+//     }
+//   });
+//   return result;
+// }
+// function isEven(num) {
+//   return num % 2 === 0;
+// }
+// function startWithO(str) {
+//   return str.toLowerCase().startsWith('o');
+// }
+
+// const numbers = [1, 3, 6, 7, 9, 20];
 // const words = ['apple', 'banana', 'orange', 'pear'];
 
 // const res = findElement(numbers, isEven);
 // console.log(res);
-
+// const res2 = findElement(words, startWithO);
+// console.log(res2);
 //! Array methods
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
