@@ -125,6 +125,8 @@
 //TODO:=========task-06=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
+// const sortedArray = array => array.toSorted ((a,b) => a - b)
+
 // const numbersArray = [4, 2, 5, 1, 3];
 
 // const res = sortedArray(numbersArray);
@@ -132,6 +134,8 @@
 
 //TODO:===============task-07===============================
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+// const sortedArray = array => array.toSorted((a,b) => a.localeCompare(b))
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
@@ -155,6 +159,8 @@
 //TODO:=========task-09=================
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
+// const getAge = array => array.filter(item => item.age > 20)
+
 // const user = [
 //   { name: 'John', age: 27 },
 //   { name: 'Jane', age: 31 },
@@ -167,6 +173,8 @@
 //TODO:=========task-10=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
+// const sum = array => array.reduce((acc, number) => acc += number, 20 )
+
 // const numbers = [1, 2, 3, 4, 5];
 
 // const res = sum(numbers);
@@ -175,10 +183,26 @@
 //TODO:=========task-11=================
 // У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
 
+// const averageValue = array => array.reduce((acc, number) => acc + number / array.length, 0)
+
 // const arr = [1, 2, 3, 4, 5];
 
 // const res = averageValue(arr);
 // console.log(res);
+
+
+// const user = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
+// ];
+
+// const res = user.map(item => item.name).toSorted((a,b) => a.localeCompare(b))
+
+// console.log(res);
+
+
+
 
 //! Module 6
 //* Модуль 6. Заняття 12. Прототипи та класи
