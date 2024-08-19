@@ -76,14 +76,11 @@
 // const res2 = findElement(words, startWithO);
 // console.log(res2);
 
-
-
 //! Array methods
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
 
 // const getNewArray = array => array.map(number =>number * number)
-
 
 // const res = getNewArray([1, 2, 3,4,5]);
 // console.log(res);
@@ -92,7 +89,6 @@
 // Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
 // const flatArray = array =>  array.flatMap(item =>  item.values)
-
 
 // const data = [
 //   { id: 1, values: [1, 2, 3] },
@@ -122,7 +118,6 @@
 
 // const checkEvenArray= array=> array.every(number=> number %2 === 0)
 
-
 // const numbers = [2, 4, 6, 8, 10];
 
 // const res = checkEvenArray(numbers);
@@ -141,9 +136,8 @@
 //TODO:=========task-06=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-
 // const sortedArray = array => array.toSorted ((a,b) => a - b)
- 
+
 // const numbersArray = [4, 2, 5, 1, 3];
 
 // const res = sortedArray(numbersArray);
@@ -207,7 +201,6 @@
 // const res = averageValue(arr);
 // console.log(res);
 
-
 // const user = [
 //   { name: 'John', age: 27 },
 //   { name: 'Jane', age: 31 },
@@ -217,9 +210,6 @@
 // const res = user.map(item => item.name).toSorted((a,b) => a.localeCompare(b))
 
 // console.log(res);
-
-
-
 
 //! Module 6
 //* Модуль 6. Заняття 12. Прототипи та класи
@@ -231,6 +221,35 @@
  * - методи add, substruct, divide, multiply
  * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
  */
+
+// class Calculator {
+//   constructor() {
+//     this.result = 0;
+//   }
+//   number(num) {
+//     this.result = num;
+//     return this;
+//   }
+//   getResult() {
+//     return this.result;
+//   }
+//   add(num) {
+//     this.result += num;
+//     return this;
+//   }
+//   substruct(num) {
+//     this.result -= num;
+//     return this;
+//   }
+//   divide(num) {
+//     this.result /= num;
+//     return this;
+//   }
+//   multiply(num) {
+//     this.result *= num;
+//     return this;
+//   }
+// }
 
 // const calculator = new Calculator();
 // console.log(calculator);
@@ -263,15 +282,37 @@
  * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
  */
 
-// const client = new Client('Mango', 'mango@gmail.com');
+class Client {
+  #login;
+  #email;
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
+  get getLogin() {
+    console.log(this.#login);
+  }
+  set changeLogin(newLogin) {
+    this.#login = newLogin;
+  }
 
-// client.login = 12343;
-// console.log(client);
+  get getEmail() {
+    console.log(this.#email);
+  }
 
-// client.changeEmail = 'mango555@gmail.com';
-// console.log(client.getEmail);
-// client.changeLogin = '12345';
-// console.log(client.getLogin);
+  set changeEmail(newEmail) {
+    this.#email = newEmail;
+  }
+}
+const client = new Client('Mango', 'mango@gmail.com');
+
+client.changeLogin = 12343;
+console.log(client);
+
+client.changeEmail = 'mango555@gmail.com';
+console.log(client.getEmail);
+client.changeLogin = '12345';
+console.log(client.getLogin);
 //
 
 //! Практика наслідування у класах.
