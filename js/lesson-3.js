@@ -290,24 +290,28 @@ class Client {
     this.#email = email;
   }
   get getLogin() {
-    console.log(this.#login);
+    return this.#login;
   }
   set changeLogin(newLogin) {
     this.#login = newLogin;
   }
 
   get getEmail() {
-    console.log(this.#email);
+    return this.#email;
   }
 
   set changeEmail(newEmail) {
     this.#email = newEmail;
   }
 }
+
+console.log('=========task-02=================');
+
 const client = new Client('Mango', 'mango@gmail.com');
 
-client.changeLogin = 12343;
-console.log(client);
+//client.changeLogin = '12343';
+//console.log('client object: ', client);
+console.dir('client object: ', client);
 
 client.changeEmail = 'mango555@gmail.com';
 console.log(client.getEmail);
@@ -329,9 +333,27 @@ console.log(client.getLogin);
   |============================
 */
 
-// const person = new Person('John', 30, 'male', 'john@hmail.com');
+class Person {
+  constructor(name, age, gender, email) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.email = email;
+  }
+  getDetails() {
+    return {
+      name: this.name,
+      age: this.age,
+      gender: this.gender,
+      email: this.email,
+    };
+  }
+}
 
-// console.log(person.getDetails());
+console.log('=========task-04=================');
+
+const person = new Person('John', 30, 'male', 'john@hmail.com');
+console.log(person.getDetails());
 
 /**
   |=============Employee===============
@@ -341,13 +363,44 @@ console.log(client.getLogin);
   |  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
   |============================
 */
+class Employee extends Person {
+  constructor(salary, department, ...params) {
+    super(...params);
+    this.salary = salary;
+    this.department = department;
+  }
 
-// const employee = new Employee(
-//   5000,
-//   'developer',
-//   'Bob',
-//   45,
-//   'male',
-//   'bob@hmail.com'
-// );
-// console.log(employee.getEmployeeDetails());
+  getEmployeeDetails() {
+    // let employee = {};
+    // https://understandinges6.denysdovhan.com/manuscript/04-Objects.html
+    // Метод Object.assign() спрощує зміну кількох властивостей одного об’єкту одночасно.
+    //
+    // Базовий порядок переліку власних властивостей такий:
+    // Всі нумеровані ключі у порядку зростання.
+    // Всі рядкові ключі у порядку, в якому вони були додані до об’єкту.
+    // Всі символьні ключі (описано у Главі 6) у порядку, в якому вони були додані до об’єкту.
+
+    // Object.assign(
+    //   employee,
+    //   { salary: this.salary, department: this.department },
+    //   super.getDetails()
+    // );
+    // return employee;
+    return {
+      salary: this.salary,
+      department: this.department,
+      ...super.getDetails(),
+    };
+  }
+}
+
+console.log('=========task-05=================');
+const employee = new Employee(
+  5000,
+  'developer',
+  'Bob',
+  45,
+  'male',
+  'bob@hmail.com'
+);
+console.log(employee.getEmployeeDetails());
