@@ -8,3 +8,5 @@
   Code Runner
 - https://marketplace.visualstudio.com/items?itemName=fractalbrew.backticks -
   Backticks
+
+![git commands](docs/git-commands.jpg)
